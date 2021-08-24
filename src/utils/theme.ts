@@ -13,6 +13,7 @@ const theme = extendTheme({
       body: {
         bg: "brand.50",
         color: "grey.900",
+        fontFamily: "FF Bau Regular",
       },
       a: {
         color: "brand.100",

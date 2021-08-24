@@ -13,7 +13,7 @@ const Product: React.FC<ComponentProps> = ({ product }) => {
   const { handleUpdateCart, currency } = useContext(CartContext) as CartContextType
 
   return (
-    <Box p="5" maxW="sm">
+    <Box p="5">
         <VStack spacing={5}>
             <Image src={product.image_url} maxH="170" w={170} />
             <Text>{product.title}</Text>

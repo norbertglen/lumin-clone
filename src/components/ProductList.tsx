@@ -30,7 +30,7 @@ const ProductList: React.FC = () => {
       }))
       reloadCart()
     }
-  }, [products])
+  }, [products, reloadCart])
 
   useEffect(() => {
     if (currency) {

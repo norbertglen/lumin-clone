@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useState, useCallback } from 'react';
 import {
   Box,
   Flex,
@@ -42,10 +42,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const [currency, setCurrency] = useStorage('cartCurrency', 'USD')
   const [defaultCurrency, setDefaultCurrency] = useState(currency)
   
-  const reloadCart = () => {
+  const reloadCart = useCallback(() => {
     const items = storage.get('user-cart')
     setCartItems(items)
-  }
+  }, [])
 
   const handleUpdateCart = (item: Cart, action: CartAction) => {
     updateCart(item, action)

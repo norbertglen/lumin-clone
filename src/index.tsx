@@ -1,7 +1,6 @@
 import * as React from "react"
 import ReactDOM from "react-dom"
 import { App } from "./App"
-import Types from "./graphql/types"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
 
@@ -20,7 +19,6 @@ const httpLink = createHttpLink({
 const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
-  typeDefs: Types,
 });
 
 ReactDOM.render(

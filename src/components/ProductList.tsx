@@ -49,13 +49,13 @@ const ProductList: React.FC = () => {
 
   return (
     <>
-      {data && <SimpleGrid bg="brand.100" columns={[2, null, 3]} m="0 auto" mt={6} p={40} pt={15} spacing={15}>
+      {data && <SimpleGrid bg="brand.100" columns={[2, null, 3]} m="auto" mt={6} pt={15} spacing={15}>
 
         {loading && [...Array(3)].map((x, i) =>
           <Stack key={i}>
-            <Skeleton isLoaded={!loading} height="100px" />
-            <Skeleton isLoaded={!loading} height="50px" />
-            <Skeleton isLoaded={!loading} height="30px" />
+            <Skeleton height="100px" />
+            <Skeleton height="50px" />
+            <Skeleton height="30px" />
           </Stack>
         )}
         {(data.products || []).map((product: ProductModel, index: number) => <Product key={index} product={product} />)}

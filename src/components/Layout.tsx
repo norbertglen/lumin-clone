@@ -12,7 +12,7 @@ import {
 import { AiOutlineCloseCircle as CloseIcon } from 'react-icons/ai';
 import { GiHamburgerMenu as HamburgerIcon } from 'react-icons/gi';
 
-import CartDrawer from './CartDrawer';
+import CartDrawer from './cart/CartDrawer';
 import { CartContext } from '../contexts';
 import updateCart from '../utils/updateCart'
 import { Cart, CartAction } from "../types/cart";

@@ -3,7 +3,7 @@ import safeCall from './safeCall';
 let values = {};
 
 const storageUtils = {
-  set(key, value) {
+  set(key: string, value: any) {
     if ('localStorage' in window) {
       if ([undefined, null].includes(value)) {
         window.localStorage.removeItem(key);
@@ -17,7 +17,7 @@ const storageUtils = {
     }
   },
 
-  get(key) {
+  get(key: string) {
     if ('localStorage' in window) {
       const value = window.localStorage.getItem(key);
 
@@ -27,7 +27,7 @@ const storageUtils = {
     return values[key];
   },
 
-  clear(...keys) {
+  clear(...keys: string[]) {
     if (keys.length > 0) {
       keys.forEach(key => this.set(key, undefined));
     } else if ('localStorage' in window) {

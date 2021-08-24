@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Box, Image, Button, Text, VStack } from "@chakra-ui/react";
-import { Product as ProductModel } from '../types/product';
-import { CartContext } from '../contexts'
-import { formatCurrency } from '../utils/cart';
-import { CartContextType } from '../types/cart';
+import { Product as ProductModel } from '../../types/product';
+import { CartContext } from '../../contexts'
+import { formatCurrency } from '../../utils/cart';
+import { CartContextType } from '../../types/cart';
 
 type ComponentProps = {
     product: ProductModel

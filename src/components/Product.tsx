@@ -18,7 +18,7 @@ const Product: React.FC<ComponentProps> = ({ product }) => {
             <Image src={product.image_url} maxH="170" w={170} />
             <Text>{product.title}</Text>
             <Text>From {`${formatCurrency(product.price, currency)}`}</Text>
-            <Button colorScheme="brand" onClick={() => handleUpdateCart(product, { type: 'ADD' })}>Add to Cart</Button>
+            <Button borderRadius="none" colorScheme="brand" onClick={() => handleUpdateCart(product, { type: 'ADD' })}>Add to Cart</Button>
         </VStack>
     </Box>
   );

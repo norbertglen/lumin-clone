@@ -20,7 +20,7 @@ const ProductList: React.FC = () => {
 
   const refreshCart = useCallback(() => {
     const cartItems = storage.get('user-cart')
-    const cartItemIds = cartItems.map((c: Cart) => c.id)
+    const cartItemIds = (cartItems || []).map((c: Cart) => c.id)
     if (products.length && cartItemIds.length) {
       storage.set('user-cart', cartItems.map((item: Cart) => {
         return {
